@@ -11,14 +11,13 @@ countCategories();
 let showHeaders = () => {
 
   categories.forEach((category) => {
-    let header = category.querySelector("h2");
-    let items = category.querySelectorAll("li");
+    let header = category.firstElementChild;
+    let items = category.lastElementChild.querySelectorAll("li");
     console.log(`\nCategory: ${header.textContent}`);
     console.log(`Elements: ${items.length}`);
   });
 };
 
 showHeaders();
-
 
 
